@@ -11,7 +11,7 @@ def test_home_route():
     with app.test_client() as client:
         resp = client.get("/")
         assert resp.status_code == 200
-        assert b"Hello, awesome consumer!" in resp.data
+        assert b"I am back!" in resp.data
 
 def test_healthz():
     with app.test_client() as client:
